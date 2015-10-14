@@ -1,0 +1,16 @@
+---
+### Archlinux
+- name: Install Tmux Arch Linux
+  include: archlinux/install_tmux.yml
+
+### Debian
+- name: Install Tmux Debian/Ubuntu
+  include: debian/install_tmux.yml
+
+### Redhat
+- name: Install Tmux CentOS/Fedora/SuSe
+  include: redhat/install_tmux.yml
+
+### Common
+- name: Configure Common
+  include: common/configure_tmux.yml

@@ -1,0 +1,8 @@
+---
+- name: Install base package Debian/Ubuntu
+  sudo: yes
+  apt:
+    name: "{{ tmux_base_pkg }}"
+    state: present
+    update_cache: yes
+  when: ansible_os_family == "Debian" or ansible_os_family == "Ubuntu"

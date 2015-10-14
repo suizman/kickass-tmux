@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  author: Martin Evgeniev
+  description: An Ansible role for installing kickass Tmux Terminal Multiplexer.
+  company: Blackcloudz.
+  license: TBC
+  min_ansible_version: 1.2
+  platforms:
+  - name: Arch Linux
+    versions:
+    - all
+  - name: Debian/Ubuntu
+    versions:
+    - all
+  - name: CentOS/Fedora/SuSe
+    versions:
+    - all
+  categories:
+  - system
+  - tweaks
+dependencies: []

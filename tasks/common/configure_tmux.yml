@@ -1,0 +1,6 @@
+---
+- name: Copy Tmux config file
+  template:
+    src: ../../templates/common/tmux.conf.j2
+    dest: "{{ ansible_env.HOME }}/.tmux.conf"
+    mode: 0644

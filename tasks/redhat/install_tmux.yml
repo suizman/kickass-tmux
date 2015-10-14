@@ -1,0 +1,8 @@
+---
+- name: Install base package CentOS/Fedora/SuSe
+  sudo: yes
+  yum:
+    name: "{{ tmux_base_pkg }}"
+    state: present
+    update_cache: yes
+  when: ansible_os_family == "CentOS" or ansible_os_family == "Fedora" or ansible_os_family == "SuSe"

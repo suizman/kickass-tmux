@@ -1,0 +1,7 @@
+---
+### Base packages
+tmux_base_pkg: tmux
+
+### Extra packages
+tmux_extra_pkg: true
+tmux_themes_pkg: slim-themes
