@@ -1,6 +1,28 @@
 ---
-- name: Copy Tmux config file
+- name: Copy Tmux conf file
   template:
     src: ../../templates/common/tmux.conf.j2
     dest: "{{ ansible_env.HOME }}/.tmux.conf"
     mode: 0644
+
+- name: Copy Powerline like symbols conf
+  sudo: yes
+  template:
+    src: ../../templates/common/10-powerline-symbols.conf.j2
+    dest: /etc/fonts/conf.d/10-powerline-symbols.conf
+    mode: 0644
+  register: powerfont_result
+
+- name: Copy Powerline like font
+  sudo: yes
+  copy:
+    src: ../../files/common/PowerlineSymbols.otf
+    dest: /usr/share/fonts/PowerlineSymbols.otf
+    mode: 0644
+  register: powersym_result
+
+- name: Build font information cache files
+  sudo: yes
+  command: >
+    fc-cache -vf
+  when: powerfont_result | changed or powerfont_result | changed
