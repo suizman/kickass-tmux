@@ -1,5 +1,4 @@
 ---
 ### Install required roles..
 - src: https://github.com/suizman/kickass-tmux.git
-  path: roles
   scm: git
